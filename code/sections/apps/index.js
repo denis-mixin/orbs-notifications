@@ -1,0 +1,24 @@
+import React from 'react'
+import images from '../../../assets/js/images'
+
+function Apps({ title, _body, google, apple, _relativeURL, _ID }) {
+    const handleUrl = (url) => {
+        return `${_relativeURL(url, _ID)}`;
+    }
+    return (
+        <div className='apps' >
+            <h3 className='apps-title'>{title}</h3>
+            <div className='apps-body'>{_body}</div>
+            <div className='apps-links'>
+                <a href={google} target='_blank'>
+                    <img src={handleUrl(images.google)} />
+                </a>
+                <a href={apple} target='_blank'>
+                    <img src={handleUrl(images.apple)} />
+                </a>
+            </div>
+        </div>
+    )
+}
+
+export default Apps

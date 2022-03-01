@@ -1,0 +1,18 @@
+layout: page/index
+title: DeFi Notifications
+navbar:
+  - /_shared/navbar/index.md
+footer:
+  - /_shared/footer/index.md
+hero:
+  - hero/index.md
+projects:
+  - projects/index.md
+contribute:
+  - contribute/index.md
+integrations:
+  - integrations/index.md
+alerts:
+  - alerts/index.md
+apps:
+  - apps/index.md
