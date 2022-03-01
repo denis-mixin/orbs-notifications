@@ -1,5 +1,7 @@
 const navbar = document.querySelector('.navbar')
-const mobileToggle = document.querySelector('.navbar-mobile-hamburger')
+const hamburger = document.querySelector('.navbar-hamburger')
+const closeMenu = document.querySelector('.navbar-menu-close')
+
 const menu = document.querySelector('.navbar-menu')
 
 export const init = () => {
@@ -17,9 +19,13 @@ const animateNavbar = () => {
 
 
 const addClickEvents = () => {
-  mobileToggle.addEventListener('click', () => {
-    menu.classList.toggle('navbar-menu-active')
+  hamburger.addEventListener('click', () => {
+    menu.classList.add('navbar-menu-active')
   })
+  closeMenu.addEventListener('click', () => {
+    menu.classList.remove('navbar-menu-active')
+  })
+  
 }
 
 let lastScrollTop = 0;

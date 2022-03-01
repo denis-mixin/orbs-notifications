@@ -13,7 +13,9 @@ const images = {
     orbsLogo: '/assets/images/orbs-logo.svg',
     orbsLogo2: '/assets/images/orbs-logo-2.svg',
     githubDark:'/assets/images/github-dark.svg',
-    favicon:'/assets/images/favicon.ico'
+    favicon:'/assets/images/favicon.ico',
+    close:'/assets/images/mobile/close.svg',
+    hamburger:'/assets/images/mobile/hamburger.svg'
 }
 
 

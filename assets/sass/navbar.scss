@@ -16,16 +16,19 @@
         height: 100px;
     }
 
-    &-mobile-hamburger {
-        width: 50px;
-        height: 50px;
-        background: black;
+    &-hamburger {
+        width: 30px;
+        height: 30px;
         display: none;
         position: absolute;
         right: 0px;
         top: 50%;
         transform: translate(0, -50%);
-        z-index: 99;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
     }
 
     &-hide {
@@ -81,6 +84,18 @@
     &-menu {
         display: flex;
         align-items: center;
+        &-close{
+            position: absolute;
+            right:20px;
+            top: 35px;
+            width: 30px;
+            height: 30px;
+            display: none;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 
     &-github {
@@ -121,7 +136,7 @@
 
 @media only screen and (max-width: 1180px) {
     .navbar {
-        &-mobile-hamburger {
+        &-hamburger {
             display: block;
 
         }
@@ -140,6 +155,9 @@
             transform: translate(100%);
             transition: 0.3s all;
             padding-bottom: 100px;
+            &-close{
+                display: block;
+            }
             &-active {  
                 transform: translate(0%);
             }
