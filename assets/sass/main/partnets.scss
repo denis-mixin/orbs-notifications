@@ -1,0 +1,100 @@
+.main-partners {
+    @extend .section-margin-bottom;
+
+    &-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 40px;
+        gap: 0px 40px;
+
+        &-item {
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(1.99deg, #FFFFFF 30.01%, rgba(255, 255, 255, 0.5) 122.8%);
+            border-radius: 50px;
+
+            a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-decoration: none;
+            }
+
+            p {
+
+                padding-top: 10px;
+                font-weight: bold;
+                font-size: 17px;
+                color: #19184C;
+                transition: 0.2s all;
+
+            }
+
+            &-img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 50%;
+                overflow: hidden;
+                transition: 0.2s all;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .main-partners {
+        &-list {
+            gap: 0px 20px;
+
+            &-item {
+                zoom: 0.9;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $mobile) {
+    .main-partners {
+        &-list {
+            &-item {
+                &:hover {
+                    p {
+                        transform: translate(0, 30px);
+                        opacity: 0;
+
+                    }
+
+                    .main-partners-list-item-img {
+                        transform: translate(0, 15px);
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .main-partners {
+        &-list {
+            padding-top: 50px;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+
+            &-item {
+                width: 140px;
+                height: 140px;
+                zoom: 0.9;
+
+                &:hover {}
+            }
+        }
+    }
+}

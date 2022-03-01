@@ -1,0 +1,84 @@
+.projects {
+    @extend .grid;
+    margin-top: 192px;
+
+    &-title {
+        text-align: center;
+
+        h3 {
+            color: $main-text-color;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+
+    &-list {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding-top: 50px;
+    }
+
+    .project {
+        border: 1px solid #CDE4F9;
+        border-radius: 24px;
+        padding: 24px;
+        position: relative;
+        min-height: 200px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            color: #0F1C49;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 12px;
+        }
+
+        &-image {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            right: 20px;
+            bottom: 23px;
+        }
+
+        &-body {
+            max-width: 194px;
+
+            p {
+                color: $main-text-color;
+                font-size: 16px;
+                line-height: 24px;
+                opacity: 0.6;
+                letter-spacing: 0.0052em;
+            }
+        }
+
+        &-link {
+            margin-top: auto;
+            text-decoration: none;
+            color: #4F86FF;
+            font-weight: 500;
+            font-size: 18px;
+            letter-spacing: 0.0052em;
+            position: relative;
+            width: fit-content;
+            &::after{
+                position: absolute;
+                content: '';
+                right: -20px;
+                top: 50%;
+                width: 8px;
+                height: 8px;
+                border-right: 1px solid #4F86FF;
+                border-bottom: 1px solid #4F86FF;
+                transform: rotate(-45deg) translate(0, -50%);
+            }
+
+        }
+    }
+}

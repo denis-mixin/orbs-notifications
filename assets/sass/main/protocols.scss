@@ -1,0 +1,118 @@
+.main-protocols {
+    @extend .section-margin-bottom;
+
+    position: relative;
+
+    &-shadow {
+        position: absolute;
+        width: 1200px;
+        z-index: -1;
+        left: 50%;
+
+        transform: translate(-50%);
+        top: -700px;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 60px;
+        gap: 0px 30px;
+
+        &-item {
+            max-width: 460px;
+            width: calc(100% / 4 - 25px);
+            height: 130px;
+            background: linear-gradient(1.99deg, #FFFFFF 30.01%, rgba(255, 255, 255, 0.5) 122.8%);
+            border-radius: 50px;
+            margin-right: 20px;
+
+            a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding-left: 30px;
+                justify-content: flex-start;
+                text-decoration: none;
+
+                p {
+                    font-weight: bold;
+                    font-size: 28px;
+                    color: #19184C;
+                }
+            }
+
+            &-img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .main-protocols {
+        &-list-item {
+            a {
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .main-protocols {
+        &-list{
+            gap: 0px 20px;
+            &-item {
+                height: 100px;
+    
+                &-img {
+                    width: 50px;
+                    height: 50px;
+                }
+    
+                a {
+                    padding-left: 20px;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: $mobile) {
+    .main-protocols {
+        &-shadow {
+            display: none;
+        }
+
+        &-list {
+            flex-direction: column;
+            gap: 50px;
+            padding-top: 64px;
+
+            &-item {
+                width: 100%;
+                max-width: 500px;
+
+                a {
+                    p {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

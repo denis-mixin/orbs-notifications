@@ -1,0 +1,101 @@
+.main-media {
+    @extend .grid;
+    position: relative;
+    @extend .section-margin-bottom;
+    height: fit-content;
+    &-mobile-shadow{
+        display: none;
+    }
+
+    &-list {
+        flex-wrap: wrap;
+        display: flex;
+        gap: 55px 70px;
+        padding-top: 60px;
+        justify-content: space-between;
+
+        &-item {
+            a {
+                text-decoration: none;
+
+            }
+
+            width: 295px;
+
+
+            &-body {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 19px;
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-top: 20px;
+            }
+
+
+            &-poster {
+                width: 100%;
+                height: 195px;
+                position: relative;
+                margin-bottom: 20px;
+                border-radius: 49px;
+                overflow: hidden;
+                img {
+                    pointer-events: none;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+    .main-media {
+
+        &-list {
+            padding-top: 50px;
+            gap: 55px 30px;
+
+            &-item {
+                width: calc(25% - 30px);
+
+                &-poster {
+                   height: 13vw;
+                    img {
+                  
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .main-media {
+        &-list {
+            flex-direction: column;
+            align-items: center;
+
+            &-item {
+                width: 100%;
+                max-width: 500px;
+                text-align: center;
+
+                &-poster {
+                    min-height: 195px;
+                    height: 40vw;
+                    max-height: 260px;
+                    img {
+                       
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@import './hero.scss';
+@import './videos.scss';
+@import './learn-more.scss';
+@import './media.scss';
+@import './partnets.scss';
+@import './protocols.scss';
+
+.main{
+    position: relative;
+    height: 100%;
+  
+   
+    &-globe{
+        position: absolute;
+        right: 0px;
+        pointer-events: none;
+        top: 0px;
+        z-index: -1;
+         --animate-duration: 2.5s;
+      
+    }
+    &-mobile-globe{
+        display: none;
+        pointer-events: none;
+    }
+    &-shadow{
+        position: absolute;
+        right: 0px;
+        z-index: -2;
+        width: 900px;
+        pointer-events: none
+    }
+    &-grid{
+        @extend .grid;
+    }
+}
+@media only screen and (max-width: 1550px) {
+    .main{
+       
+        &-shadow{
+            width: 700px;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 1350px) {
+      .main{
+          &-globe{
+            width: 600px;
+           
+
+          }
+      }
+  }
+
+  @media only screen and (max-width: $mobile){
+      .main{
+          &-globe{
+             display: none;
+          }
+          &-shadow{
+              display: none;
+          }
+          &-mobile-globe{
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 270px);
+            top: 0%;
+            width: 100vw;
+            transform-origin: bottom;
+        }
+      }
+  }

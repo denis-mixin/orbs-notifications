@@ -1,0 +1,53 @@
+.tooltip {
+    position: absolute;
+    width: fit-content;
+
+    &-btn {
+        cursor: pointer;
+        width: 22px;
+        height: 22px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-body {
+        left: 46%;
+        transform: translate(-50%);
+        bottom: calc(100% + 20px);
+        position: absolute;
+        padding: 20px;
+        background: #323061;
+        border-radius: 10px;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.2s all;
+
+        * {
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+
+        &::after {
+            position: absolute;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            background: #323061;
+            content: '';
+            bottom: -10px;
+            transform: rotate(45deg) translate(-50%);
+        }
+    }
+    &:hover{
+        .tooltip-body{
+            opacity: 1;
+            
+        }
+    }
+}

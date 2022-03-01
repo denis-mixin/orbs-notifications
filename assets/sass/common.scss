@@ -1,0 +1,28 @@
+
+
+.grid {
+  max-width: 1440px;
+  width: calc(100% - 120px);
+  margin: 0 auto;
+}
+
+.link-button {
+  background: linear-gradient(264.34deg, #3D60E1 27%, #D44CD1 91.31%);
+  border-radius: 20px;
+  color: white;
+  padding: 0px 46px;
+  font-weight: 600;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+
+@media only screen and (max-width: 1050px){
+  .grid {
+    width: calc(100% - 40px);
+  }
+}

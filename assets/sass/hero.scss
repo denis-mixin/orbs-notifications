@@ -1,0 +1,63 @@
+.hero {
+    display: flex;
+
+    @extend .grid;
+
+
+    &-image {
+        width: 320px;
+        height: auto;
+    }
+
+    &-description {
+        padding-right: 174px;
+
+        h1 {
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 75px;
+            margin-bottom: 40px;
+            max-width: 760px;
+        }
+
+        h4 {
+            font-weight: normal;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            font-size: 20px;
+            line-height: 40px;
+            font-weight: normal;
+            color: #130F49;
+            max-width: 640px;
+            margin-bottom: 40px;
+        }
+
+        a {
+            display: flex;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 24px;
+            position: relative;
+            padding-left: 50px;
+            line-height: 40px;
+            margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                background-image: url('../images/right-arrow.svg');
+                left: 0px;
+                top: 50%;
+                transform: translate(0, -50%);
+                width: 34px;
+                height: 34px;
+                background-size: contain;
+            }
+        }
+    }
+}
